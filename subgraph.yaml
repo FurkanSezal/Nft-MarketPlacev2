@@ -4,11 +4,11 @@ schema:
 dataSources:
   - kind: ethereum
     name: NftMarketplace
-    network: mumbai
+    network: sepolia
     source:
-      address: "0xB7e9f42386504a3BA7Cd9fcB298fcFafb4B21C69"
+      address: "0x6C2ECb0aEB7E182d7883B53717e8727217b1Fe4B"
       abi: NftMarketplace
-      startBlock: 37557201
+      startBlock: 3831767
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -28,6 +28,4 @@ dataSources:
           handler: handleItemCanceled
         - event: ItemListed(indexed address,indexed address,indexed uint256,uint256,uint256)
           handler: handleItemListed
-        - event: OwnershipTransferred(indexed address,indexed address)
-          handler: handleOwnershipTransferred
       file: ./src/nft-marketplace.ts
